@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Confirmation page</title>
+	</head>
+	<body>
+		<h1>Your Registration Confirmed!!</h1>
+		<h3>Details:</h3>
+		<script>
+			var myData = localStorage.getItem('Data');
+			//document.write(myData);
+			var arr=JSON.parse(localStorage.getItem('Data'));
+			/*arr.forEach(function(obj) {
+				document.write(obj.name);
+				document.write(obj.email);
+			});
+			*/
+			var obj=arr.pop();
+			document.write("Name: "  + obj.name + "<br>" + "Email: " + obj.email + "<br>" + "No. of Passes taken: " + obj.NoOfPasses);
+		</script>
+	</body>
+</html>
